@@ -1,10 +1,10 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
-  const typetrain = sequelize.define('typetrain', {
+  const typekereta = sequelize.define('typekereta', {
     name: DataTypes.STRING
   }, {});
-  typetrain.associate = function(models) {
+  typekereta.associate = function(models) {
     // associations can be defined here
   };
-  return typetrain;
+  return typekereta;
 };

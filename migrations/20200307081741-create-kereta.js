@@ -1,7 +1,7 @@
 'use strict';
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable('trains', {
+    return queryInterface.createTable('kereta', {
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -11,20 +11,23 @@ module.exports = {
       name_train: {
         type: Sequelize.STRING
       },
-      date_start: {
+      id_type: {
+        type: Sequelize.INTEGER
+      },
+      dateStart: {
+        type: Sequelize.DATE
+      },
+      startStation: {
         type: Sequelize.STRING
       },
-      start_station: {
+      startTime: {
+        type: Sequelize.TIME
+      },
+      destinationStation: {
         type: Sequelize.STRING
       },
-      start_time: {
-        type: Sequelize.STRING
-      },
-      destination_station: {
-        type: Sequelize.STRING
-      },
-      arrival_time: {
-        type: Sequelize.STRING
+      arivalTime: {
+        type: Sequelize.TIME
       },
       price: {
         type: Sequelize.INTEGER
@@ -43,6 +46,6 @@ module.exports = {
     });
   },
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('trains');
+    return queryInterface.dropTable('kereta');
   }
 };

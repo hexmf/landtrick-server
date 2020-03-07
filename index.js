@@ -1,5 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const cors = require('cors');
 
 const { login, register } = require('./middlewares/users/controller');
 
@@ -8,7 +9,7 @@ require('dotenv').config();
 
 const app = express();
 const port = 5001;
-// app.use(cors());
+app.use(cors());
 app.use(bodyParser.json());
 
 app.group('/api/v1', router => {

@@ -19,10 +19,11 @@ exports.login = (req, res) => {
         token
       });
     } else {
-      res.send({
+      res.status(404).send({
         error: true,
         message: 'Wrong Email or Password!'
       });
+      // res.status(404).json
     }
   });
 };
