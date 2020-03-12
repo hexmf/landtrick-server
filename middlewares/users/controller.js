@@ -20,6 +20,7 @@ exports.login = (req, res) => {
       });
     } else {
       res.status(404).send({
+        data: 'ini data',
         error: true,
         message: 'Wrong Email or Password!'
       });

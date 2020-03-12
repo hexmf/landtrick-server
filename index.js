@@ -3,6 +3,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 
 const { login, register } = require('./middlewares/users/controller');
+const { addTicket } = require('./middlewares/kereta/controller');
 
 require('express-group-routes');
 require('dotenv').config();
@@ -18,6 +19,7 @@ app.group('/api/v1', router => {
   });
   router.post('/login', login);
   router.post('/register', register);
+  router.post('/ticket/', addTicket);
 });
 
 app.listen(port, () => console.log(`Server is listening on ${port}`));

@@ -12,7 +12,14 @@ module.exports = {
         type: Sequelize.STRING
       },
       id_type: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        references: {
+          model: 'typekereta',
+          key: 'id'
+        },
+        onUpdate: 'cascade',
+        onDelete: 'cascade'
       },
       dateStart: {
         type: Sequelize.DATE
