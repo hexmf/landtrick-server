@@ -18,11 +18,11 @@ module.exports = {
           model: 'typekereta',
           key: 'id'
         },
-        onUpdate: 'cascade',
-        onDelete: 'cascade'
+        onUpdate: 'CASCADE',
+        onDelete: 'CASCADE'
       },
       dateStart: {
-        type: Sequelize.DATE
+        type: Sequelize.DATEONLY
       },
       startStation: {
         type: Sequelize.STRING

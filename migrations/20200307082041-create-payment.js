@@ -8,26 +8,26 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      trainId: {
-        type: Sequelize.INTEGER,
-        allowNull: false,
-        references: {
-          model: 'kereta',
-          key: 'id'
-        },
-        onUpdate: 'cascade',
-        onDelete: 'cascade'
-      },
-      userId: {
-        type: Sequelize.INTEGER,
-        allowNull: false,
-        references: {
-          model: 'users',
-          key: 'id'
-        },
-        onUpdate: 'cascade',
-        onDelete: 'cascade'
-      },
+      // trainId: {
+      //   type: Sequelize.INTEGER,
+      //   allowNull: false,
+      //   references: {
+      //     model: 'kereta',
+      //     key: 'id'
+      //   },
+      //   onUpdate: 'CASCADE',
+      //   onDelete: 'CASCADE'
+      // },
+      // userId: {
+      //   type: Sequelize.INTEGER,
+      //   allowNull: false,
+      //   references: {
+      //     model: 'users',
+      //     key: 'id'
+      //   },
+      //   onUpdate: 'CASCADE',
+      //   onDelete: 'CASCADE'
+      // },
       qty: {
         type: Sequelize.INTEGER
       },

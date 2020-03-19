@@ -3,29 +3,25 @@
 module.exports = {
   up: (queryInterface, Sequelize) => {
     return queryInterface.bulkInsert(
-      'users',
+      'typekereta',
       [
         {
-          name: 'budi',
-          status: 0,
-          username: 'budi',
-          email: 'budi@gmail.com',
-          password: '123',
-          gender: 'Male',
-          phone: '081772891204',
-          address: 'Depok',
+          name: 'express',
           createdAt: new Date(),
           updatedAt: new Date()
         },
         {
-          name: 'admin',
-          status: 1,
-          username: 'admin',
-          email: 'admin@gmail.com',
-          password: 'admin',
-          gender: 'Male',
-          phone: '081772893204',
-          address: 'Tangerang',
+          name: 'ekonomi',
+          createdAt: new Date(),
+          updatedAt: new Date()
+        },
+        {
+          name: 'bisnis',
+          createdAt: new Date(),
+          updatedAt: new Date()
+        },
+        {
+          name: 'eksekutif',
           createdAt: new Date(),
           updatedAt: new Date()
         }
@@ -41,7 +37,8 @@ module.exports = {
 
       Example:
       return queryInterface.bulkDelete('People', null, {});
+      
     */
-    return queryInterface.bulkDelete('users', null, {});
+    return queryInterface.bulkDelete('typekereta', null, {});
   }
 };

@@ -15,14 +15,48 @@ module.exports = {
         type: Sequelize.STRING
       },
       id_tiket: {
-        type: Sequelize.INTEGER
+        allowNull: false,
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'kereta',
+          key: 'id'
+        },
+        onUpdate: 'CASCADE',
+        onDelete: 'CASCADE'
       },
       id_user: {
-        type: Sequelize.INTEGER
+        allowNull: false,
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'users',
+          key: 'id'
+        },
+        onUpdate: 'CASCADE',
+        onDelete: 'CASCADE'
       },
       id_payment: {
-        type: Sequelize.INTEGER
+        allowNull: false,
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'payments',
+          key: 'id'
+        },
+        onUpdate: 'CASCADE',
+        onDelete: 'CASCADE'
       },
+      // price: {
+      //   type: Sequelize.INTEGER
+      // },
+      // qty: {
+      //   type: Sequelize.INTEGER
+      // },
+      // totalPrice: {
+      //   type: Sequelize.INTEGER
+      // },
+      // status: {
+      //   type: Sequelize.ENUM,
+      //   values: ['approved', 'cancel', 'pending']
+      // },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

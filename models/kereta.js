@@ -5,7 +5,7 @@ module.exports = (sequelize, DataTypes) => {
     {
       name_train: DataTypes.STRING,
       id_type: DataTypes.INTEGER,
-      dateStart: DataTypes.DATE,
+      dateStart: DataTypes.DATEONLY,
       startStation: DataTypes.STRING,
       startTime: DataTypes.TIME,
       destinationStation: DataTypes.STRING,
